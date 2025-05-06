@@ -12,6 +12,7 @@ import (
 	"github.com/PuerkitoBio/goquery"
 )
 
+// TestCase sample input/output
 type Sample struct {
 	Input  string
 	Output string
@@ -118,7 +119,6 @@ func GetMostRecentContestID() (string, error) {
 	return contestID, nil
 }
 
-
 func main() {
 	contestID := flag.String("contest", "", "AtCoder contest ID (e.g., abc349)")
 	problems := flag.String("range", "a-g", "Problem range (e.g., a-d)")
@@ -133,8 +133,8 @@ func main() {
 		}
 		*contestID = id
 		fmt.Printf("📦 Using the most recent ABC contest: %s\n", *contestID)
-	}	
-	
+	}
+
 	start := rune((*problems)[0])
 	end := rune((*problems)[len(*problems)-1])
 
