@@ -106,10 +106,10 @@ func GetMostRecentContestID() (string, error) {
 			id := strings.TrimPrefix(link, "/contests/")
 			if strings.HasPrefix(id, "abc") {
 				contestID = id
-				return false // Stop iteration after finding the first ABC contest
+				return false
 			}
 		}
-		return true // Continue iteration
+		return true
 	})
 
 	if contestID == "" {
