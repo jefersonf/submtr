@@ -120,8 +120,8 @@ func GetMostRecentContestID() (string, error) {
 }
 
 func main() {
-	contestID := flag.String("contest", "", "AtCoder contest ID (e.g., abc349)")
-	problems := flag.String("range", "a-g", "Problem range (e.g., a-d)")
+	contestID := flag.String("c", "", "AtCoder contest ID (e.g., abc349)")
+	problems := flag.String("r", "a-g", "Problem range (e.g., a-d)")
 	concurrency := flag.Int("concurrency", 4, "Max number of concurrent fetches")
 	flag.Parse()
 
