@@ -2,5 +2,5 @@
 
 Usage
 ```sh
-go run main.go -contestID=abc403
+go run main.go -c=abc403
 ```
