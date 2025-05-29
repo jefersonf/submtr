@@ -90,13 +90,11 @@ func GetMostRecentContestID() (string, error) {
 		return "", fmt.Errorf("failed to fetch contests archive, status: %d", resp.StatusCode)
 	}
 
-	// Parse the HTML document
 	doc, err := goquery.NewDocumentFromReader(resp.Body)
 	if err != nil {
 		return "", fmt.Errorf("failed to parse contests archive page: %w", err)
 	}
 
-	// Iterate over each row in the contests table
 	var contestID string
 	doc.Find("table tbody tr").EachWithBreak(func(i int, s *goquery.Selection) bool {
 		// Find the link to the contest
