@@ -12,7 +12,7 @@ import (
 	"github.com/PuerkitoBio/goquery"
 )
 
-// TestCase sample input/output
+// Sample sample input/output
 type Sample struct {
 	Input  string
 	Output string
