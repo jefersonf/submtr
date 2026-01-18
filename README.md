@@ -1,4 +1,6 @@
-# submtr
+
+**submtr** is a command-line interface (CLI) tool written in Go, designed to automate the process of fetching competitive programming problem sets, specifically from AtCoder.
+
 
 Usage
 ```sh
